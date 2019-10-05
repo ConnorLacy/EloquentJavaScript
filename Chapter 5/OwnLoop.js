@@ -7,3 +7,11 @@
     
     Finally, it calls the update function to create a new value and starts from the beginning.
 */
+
+function loop(value, test, update, body){
+    for(let i = value; test(value); value = update(value)){
+        body(value)
+    }
+}
+
+loop(3, n=> n>0, n=> n-1, console.log);
