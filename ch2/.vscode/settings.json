@@ -1,4 +1,6 @@
 {
     "editor.tabSize": 2,
-    "prettier.packageManager": "yarn"
+    "prettier.packageManager": "yarn",
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true
 }
