@@ -1,13 +1,15 @@
 const countBs = (string) => {
-  // Count how many uppercase B's are in the given string
-  let numBs = 0;
-  let index = 0;
-  while (index < string.length) {
-    numBs += string[index] === "B" ? 1 : 0;
-    index++;
-  }
-  // Return count
-  return numBs;
+  return countChars(string, "B");
 };
 
-console.log(countBs('BeanB'))
+const countChars = (string, char) => {
+  //Same as countBs but counts given char
+  let charCount = 0;
+  let index = 0;
+  while (index < string.length) {
+    charCount += string[index++] === char ? 1 : 0;
+  }
+  return charCount;
+};
+
+console.log(countBs("Beans, B"));
