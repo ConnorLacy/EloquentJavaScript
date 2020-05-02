@@ -1,13 +1,15 @@
-// Write range function that takes array of numbers and returns
-// the sum of these numbers
-
-const range = (start, end) => {
+const range = (start, end, step = 1) => {
   let nums = [];
+  if (step < 0) {
+    let temp = start;
+    start = end;
+    end = temp;
+  }
   while (start <= end) {
     nums.push(start);
     start++;
   }
-  return nums;
+  return step < 0 ? nums.reverse() : nums;
 };
 
 const sum = (numberArr) => {
@@ -18,4 +20,5 @@ const sum = (numberArr) => {
   return total;
 };
 
-console.log(sum(range(1, 10)));
+console.log(range(1, 10, 2));
+console.log(range(5, 1, -1));
