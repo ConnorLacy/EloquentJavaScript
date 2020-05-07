@@ -6,5 +6,3 @@ export default function unless(test, then){
   // bound to the binding 'then'
   if(!test) then()
 }
-
-
