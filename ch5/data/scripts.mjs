@@ -1,6 +1,6 @@
 // Generated from the Unicode 10 database and https://en.wikipedia.org/wiki/Script_(Unicode)
 
-export const SCRIPTS = [
+const SCRIPTS = [
   {
     name: "Adlam",
     ranges: [[125184, 125259], [125264, 125274], [125278, 125280]],
@@ -1115,9 +1115,4 @@ export const SCRIPTS = [
   }
 ];
 
-// This makes sure the data is exported in node.js —
-// `require('./path/to/scripts.js')` will get you the array.
-if (typeof module != "undefined" && module.exports && (typeof window == "undefined" || window.exports != exports))
-  module.exports = SCRIPTS;
-if (typeof global != "undefined" && !global.SCRIPTS)
-  global.SCRIPTS = SCRIPTS;
+export default SCRIPTS;
