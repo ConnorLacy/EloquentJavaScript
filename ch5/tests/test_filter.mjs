@@ -1,16 +1,6 @@
-import {SCRIPTS} from './data/scripts.mjs';
+import SCRIPTS from '../data/scripts.mjs'
+import myFilter from '../functions/filter.mjs'
 
-function myFilter(array, test){
-  // Make this a pure function by leaving original array 
-  // alone. 'immutable'
-  let passed = []
-  for(let element of array){
-    if(test(element)){
-      passed.push(element)
-    }
-  }
-  return passed
-}
 console.log('My filter:\n', myFilter(SCRIPTS, s => s.direction == "ttb"));
 console.log('Built in filter:\n', SCRIPTS.filter(s => s.direction == "ttb"));
 
